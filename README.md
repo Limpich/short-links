@@ -3,7 +3,7 @@
 1. Склонировать репозиторий и выполнить команды
 ```
 composer install -o
-cp .env.example .env // Указать в .env параметры подключения к БД
+cp .env.example .env // Указать в .env параметры подключения к БД и APP_URL
 php artisan migrate:fresh
 ```
 Проект требует перенаправление всего на /public/index.php
