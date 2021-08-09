@@ -19,7 +19,10 @@ class LinkController extends Controller
     {
         return [
             /** Стандартный url не пропускает ссылки вида 'vk.com' */
-            'url' => 'required|regex:/^(https?:\/\/)?([\w\.]+)\.([a-z]{2,6}\.?)(\/[\w\.]*)*\/?$/',
+            'url' => [
+                'required',
+                'regex:/(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]+\.[^\s]{2,}|www\.[a-zA-Z0-9]+\.[^\s]{2,})/',
+            ],
         ];
     }
 
