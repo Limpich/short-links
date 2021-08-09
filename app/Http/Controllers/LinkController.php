@@ -18,7 +18,6 @@ class LinkController extends Controller
     private static function createValidationRules(): array
     {
         return [
-            /** Стандартный url не пропускает ссылки вида 'vk.com' */
             'url' => [
                 'required',
                 'url',
