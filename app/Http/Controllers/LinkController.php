@@ -90,12 +90,7 @@ class LinkController extends Controller
         }
 
         $url = $link->getUrl();
-        /** Добавляем протокол, если ссылка без него */
-        if (!str_starts_with('http', $url)) {
-            $url = 'https://' . $url;
-        }
-
-        /** Редиректим на указанную ссылку */
+        
         return Redirect::to($url);
     }
 
